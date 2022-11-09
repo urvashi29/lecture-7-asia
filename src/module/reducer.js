@@ -4,7 +4,8 @@ import * as actions from './actionType';
 const initState = {
     employee: [],
     modalIsOpen: false,
-    evData: []
+    evData: [],
+    recipe: []
 }
 
 const reducer = (state = initState, action) => {
@@ -18,6 +19,9 @@ const reducer = (state = initState, action) => {
         case actions.GET_EV_DATA:
             console.log(action.payload)
             return { ...state, evData: action.payload }
+
+        case actions.GET_RECIPE_DATA:
+            return { ...state, recipe: action.payload }
         default:
             return state;
     }

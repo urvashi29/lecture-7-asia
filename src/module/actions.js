@@ -1,5 +1,6 @@
 import * as actions from './actionType';
 import data from './About/component/evData';
+import recipeData from './Recipe/data';
 
 export const onAddEmployee = (emp) => {
     //api call
@@ -38,6 +39,20 @@ export const getEvData = () => (dispatch) => {
         })(data.evData)
     )
 }
+
+export const getRecipe = () => (dispatch) => {
+
+   dispatch(
+    ((data) => {
+        return{
+            type:actions.GET_RECIPE_DATA,
+            payload : data.recipe
+        } 
+    })(recipeData)
+   )
+}
+
+
 
 //post reuqest
 // export const onAddEmployee = (emp) => (dispatch) => {

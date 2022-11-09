@@ -1,4 +1,4 @@
-const data = {
+const recipeData = {
 
     recipe: [
         {
@@ -89,5 +89,5 @@ const data = {
 
 }
 
-export default data;
+export default recipeData;
 
